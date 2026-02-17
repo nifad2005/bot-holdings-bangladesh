@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ui } from "../ui";
 
 type AppItem = {
   name: string;
@@ -18,11 +19,8 @@ export default function AppsPage() {
   return (
     <div className="space-y-8">
       <header className="space-y-2">
-        <h1 className="text-2xl font-semibold tracking-tight">Apps</h1>
-        <p className="text-[var(--muted)]">
-          A simple directory of helpful apps. More tools can be added here over
-          time.
-        </p>
+        <h1 className={ui.h2}>Apps</h1>
+        <p className={ui.lead}>Downloads</p>
       </header>
 
       <div className="grid gap-4 md:grid-cols-2">
@@ -31,7 +29,7 @@ export default function AppsPage() {
             <Link
               key={app.name}
               href={app.href}
-              className="rounded-2xl border border-[var(--border)] bg-[var(--card)] p-6 hover:bg-black/5"
+              className={`${ui.card} ${ui.cardHover} p-6`}
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="space-y-2">
