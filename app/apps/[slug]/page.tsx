@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { fetchAppBySlug } from "../../apps-data";
 import { ui } from "../../ui";
+import ShareMenu from "../share-menu";
 
 export default async function AppDetailsPage({
   params,
@@ -61,6 +62,8 @@ export default async function AppDetailsPage({
         </div>
       </section>
 
+      <ShareMenu title={app.name} text={app.description ?? ""} />
+
       {app.description ? (
         <section className={`${ui.card} p-6`}>
           <p className="text-sm text-[var(--muted)]">{app.description}</p>
@@ -102,4 +105,3 @@ export default async function AppDetailsPage({
     </div>
   );
 }
-
