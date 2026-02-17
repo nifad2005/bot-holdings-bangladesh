@@ -26,7 +26,7 @@ export default function BjmDetailsPage() {
           <div className="space-y-1">
             <div className="font-semibold">Install BJM</div>
             <div className="text-sm text-[var(--muted)]">
-              Download the app installer (Google Drive).
+              Download the app installer.
             </div>
           </div>
           <a
@@ -65,4 +65,3 @@ export default function BjmDetailsPage() {
     </div>
   );
 }
-
